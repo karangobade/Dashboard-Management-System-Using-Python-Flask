@@ -1,0 +1,14 @@
+
+ {% with messages = get_flashed_messages() %}
+        {% for m in messages %}
+ <p style="color: red;">{{ m }}</p>
+        {% endfor %}
+ {% endwith %}
+<h1>Register Form</h1>
+<form  action='/register' method="POST">
+    <input type="text" name="name" placeholder="enter name"><br></br>
+    <input type="email" name="email" placeholder="enter email"><br></br>
+    <input type="password" name="password" placeholder="enter password"><br></br>
+    <button type="submit">Register</button>
+    <p>if you have  account go <b><a href='/login'>Login</a></b></p>
+</form>
